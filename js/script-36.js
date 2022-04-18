@@ -1,25 +1,74 @@
-//Функция checkForSpam(message) принимает строку (параметр message), проверяет её на содержание запрещенных слов spam и sale, и возвращает результат проверки. Слова в строке параметра message могут быть в произвольном регистре, например SPAM или sAlE.
+//function bmi(weight, height) {
+//
+//  let bmi = weight / (height ** 2)
+//
+//  let c = "Normal"
+//
+//  switch (bmi) {
+//    case bmi <= 18.5:
+//      c = "Underweight";
+//      break;
+//
+//    case bmi <= 25.0:
+//      c = "Normal";
+//      break;
+//
+//    case bmi <= 30.0:
+//      c = "Overweight";
+//      break;
+//
+//  }
+//return c
+//}
 
-//Если нашли запрещенное слово (spam или sale) то функция возвращает буль true.
-//Если в строке нет запрещенных слов, функция возвращает буль false.
-//Тесты
-//Объявлена функция checkForSpam(message).
 
-function checkForSpam(message) {
-  let result;
-  // Change code below this line
 
-  result =
-    message.toLowerCase().includes("spam") ||
-    message.toLowerCase().includes("sale");
+  //function bmi(weight, height) {
+  //  let bmi=weight / (height**2)
+  //   if (bmi<=18.5){
+  //     return "Underweight";}
+  //     else if (bmi<=25.0){
+  //       return "Normal"
+  //   }
+  //   else if(bmi<=30.0){
+  //     return "Overweight"
+  //   }
+  //   else if (bmi>30){
+  //     return "Obese"
+  //   }
+  // }
 
-  // Change code above this line
-  return result;
+ // if (av<=18.5){
+ //   return "Underweight"}
+ //   else if  (av<=25.0){
+ //     return "Normal"
+ // }
+ // else if  (av<=30.0){
+ //   return "Overweight"
+ // }
+ // else if (av>30){
+ //   return "Obese"
+ // }}
+
+
+
+//console.log(bmi(80, 1.80))
+
+function even_or_odd(number) {
+  
+  if (number%2==0){
+   return "Even"
+    }
+  else {return"odd"}
+  
 }
-console.log(checkForSpam("Latest technology news")); // возвращает false
-console.log(checkForSpam("JavaScript weekly newsletter")); //возвращает false
-console.log(checkForSpam("Get best sale offers now!")); // возвращает true
-console.log(checkForSpam("Amazing SalE, only tonight!")); // возвращает true
-console.log(checkForSpam("Trust me, this is not a spam message")); //возвращает true
-console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!")); // возвращает true
-console.log(checkForSpam("[SPAM] How to earn fast money?")); // возвращает true
+
+console.log(even_or_odd(2) );
+console.log(even_or_odd(7) );
+
+const dessert={type:"pie"}
+dessert.type="pudding";
+
+const seconds=dessert;
+seconds.type="fruit"
+console.log(dessert.type)
