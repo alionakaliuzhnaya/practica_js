@@ -323,18 +323,135 @@
 //console.log(getDrinksWithStep(18, 10))// === 12 // (1 + 11);
 
 
-function calculateProfit(amount, percent, period) {
-  let total=amount;
- 
-  for(let i=0;i<period;i++){
-    (total+total)*percent/100
-    total+=(total*percent)/100
+//function calculateProfit(amount, percent, period) {
+//  let total=amount;
+// 
+//  for(let i=0;i<period;i++){
+//    (total+total)*percent/100
+//    total+=(total*percent)/100
+//
+//  }
+//  return total-amount
+//
+//}
+// 
+//
+//console.log(calculateProfit(1000, 5, 1))// === 50
+//console.log(calculateProfit(12500, 3, 12)) // === 5322
+
+//function countMs(text) {
+//  let count =0;
+//
+//  for (const letter of text){
+//    if(letter==="m"||letter==="M"){
+//count ++
+//    }
+// 
+//   }
+//
+//  
+//  return count
+// }
+//
+//console.log(countMs('document'))// === 1
+//console.log(countMs('Mermaid'))// === 2 // потрібно рахувати і 'm', і 'M'
+//console.log(countMs('code'))// === 0 
+
+
+//function removeVowels(doc) {
+//let result="";
+// for (let d of doc){
+//  // console.log(d)
+//   if( !"aeiouy".includes(d.toLowerCase())){
+//    result+=d
+//   }
+// }
+//return result
+//}
+//
+//console.log(removeVowels('document'))// === 'dcmnt'
+//console.log(removeVowels('I like my boss'))// === ' lk m bss'
+//console.log(removeVowels('350 euro'))// === '350 r'
+
+
+//function makeAbbr(words) {
+//  let abbreviation = words[0];
+//
+//  for (let i=0; i <= words.length;i++){
+//    if(words[i] === " "){
+//      abbreviation+=words [i+1];
+//    }
+//    
+//  }
+//  return abbreviation.toUpperCase()
+//}
+//
+//console.log(makeAbbr('national aeronautics space administration'))// === 'NASA'
+//console.log(makeAbbr('central processing unit'))// === 'CPU'
+//console.log(makeAbbr('simplified molecular input line entry specification'))// === 'SMILES'
+
+//function decryptMessage(message) {
+//  let result="";
+//  for (let i=message.length-1;i>=0; i--){
+//    result+=message[i]
+//  }
+//  return result
+//  }
+//
+//console.log(decryptMessage('!!!reeb gniknird ekil eW'))// === 'We like drinking beer!!!'
+//console.log(decryptMessage('0202 ni eb lliw cimednap surivanoroc A'))// === 'A coronavirus pandemic will be in 2020'
+
+//function isWerewolf(target) {
+//  let direct="";
+//  let reversed="";
+// 
+// for( let letter of target){
+//
+//   if(letter.toLowerCase()!==letter.toUpperCase()){
+//     direct+=letter.toLowerCase();
+//     reversed =letter.toLowerCase()+reversed
+//   }
+// }
+// return direct===reversed
+//}
+//console.log(isWerewolf('rotator'))//=== true // rotator --> rotator
+//console.log(isWerewolf('home'))// === false // home --> emoh
+//console.log(isWerewolf('Racecar'))// === true // регістр ігнорується
+//console.log(isWerewolf('eva, can i see bees in a cave'))// === true // пробіли і розділові знаки ігноруються
+
+
+//function getSuccessRate(statistic) {
+//
+//  if(statistic.length===0){
+//    return 0
+//  }
+//  let count=0;
+//   for (let i=0; i<statistic.length;i++) {
+//     if(statistic[i]==="1"){
+//       count++;
+//     }
+//   }
+// let result=(100/(statistic.length)*count)
+// return Math.round(result)
+//
+//}
+//console.log(getSuccessRate('11100'))// === 60
+//console.log(getSuccessRate('1100'))// === 50
+//console.log(getSuccessRate('000000'))// === 0
+//console.log(getSuccessRate('11111'))// === 100
+//console.log(getSuccessRate(''))// === 0
+
+function createArray(N) {
+  const numbers=[];
+  if(N===0){
+    return [];
+  }
+
+  for (let i=1;i<N,i++;){
+    numbers.push(i)
 
   }
-  return total-amount
-
 }
- 
-
-console.log(calculateProfit(1000, 5, 1))// === 50
-console.log(calculateProfit(12500, 3, 12)) // === 5322
+console.log(createArray(1))// === [1]
+console.log(createArray(3))// === [1, 2, 3]
+console.log(createArray(0))// === []
