@@ -441,17 +441,3 @@
 //console.log(getSuccessRate('11111'))// === 100
 //console.log(getSuccessRate(''))// === 0
 
-function createArray(N) {
-  const numbers=[];
-  if(N===0){
-    return [];
-  }
-
-  for (let i=1;i<N,i++;){
-    numbers.push(i)
-
-  }
-}
-console.log(createArray(1))// === [1]
-console.log(createArray(3))// === [1, 2, 3]
-console.log(createArray(0))// === []
