@@ -263,18 +263,87 @@
 //console.log(isTidy (13579))// ==> true
 
 
-function isJumping(number) {
-  let str=number.toString();
-  if(str.length===1) {return ' JUMPING'}
-  
-   for(let i=1;i<str.length;i++){
-     if(Math.abs(str[i]-str[i-1]) !==1){
-       return "NOT JUMPING"
-     }
-   }
-   return ' JUMPING'
+//function isJumping(number) {
+//  let str=number.toString();
+//  if(str.length===1) {return ' JUMPING'}
+//  
+//   for(let i=1;i<str.length;i++){
+//     if(Math.abs(str[i]-str[i-1]) !==1){
+//       return "NOT JUMPING"
+//     }
+//   }
+//   return ' JUMPING'
+//}
+//
+//console.log(isJumping(9))// === 'JUMPING'
+//console.log(isJumping(79))// === 'NOT JUMPING'
+//console.log(isJumping(23454))// === 'JUMPING'
+
+
+//function doubleChars(message) {
+////const b= message.split("").reduce((acc,i)=>{
+////   return acc=+i+i
+//// })
+////return b
+////}
+//let result = '';
+//message.split('').forEach(m => {
+//  result += m+m;
+//});
+//return result
+//}
+//
+//console.log(doubleChars ('Mate academy'))// === 'MMaattee  aaccaaddeemmyy'
+//function getLastDigit(number) {
+// // let last=number%10
+//  //return last;
+//
+//  // 1
+//  //приводим к строке и удаляем посл элемент
+//const last=number.toString().split('').pop();
+////приводим к числу
+//const lastDigit=+(last)
+//return lastDigit
+//}
+//
+//console.log(getLastDigit(1))//=== 1
+//console.log(getLastDigit(145))// === 5
+//console.log(getLastDigit(5267723))// === 3
+//console.log(getLastDigit(-1))// === 1
+//console.log(getLastDigit(-1.2454))//) === 4
+
+//function removeZS(string) {
+//  
+//return string.replace(/[sSzZ]+/g,"")
+//}
+//console.log(removeZS('Mate academy'))// === 'Mate academy'
+//console.log(removeZS('zzzmatesss'))//=== 'mate'
+//console.log(removeZS('ZMzastSe AcaZzzzdemsSy'))// === 'Mate Academy'
+//console.log(removeZS('zszszSSZsz'))// === ''
+
+//function findSmallestElement(numbers) {
+//  const min = Math.min(...numbers)
+//return min
+//}
+//
+//console.log(findSmallestElement([5, 2, 8, 12, 6]))// === 2
+//console.log(findSmallestElement([4, 4, 4, 4]))// === 4
+//console.log(findSmallestElement([0, -1, -2, -3]))// === -3
+
+//function getLongest(strings) {
+// // return strings.sort(function(a, b) 
+// // {return b.length - a.length})[0];
+//
+//}
+//
+//console.log(getLongest(['One', 'two', 'three', 'four']))// === 'three'
+//console.log(getLongest(['One', 'two', 'six']))// === 'One'
+
+function removeLetter(word, letter) {
+return word.replace(new RegExp(letter,"g"),"")
+ 
 }
 
-console.log(isJumping(9))// === 'JUMPING'
-console.log(isJumping(79))// === 'NOT JUMPING'
-console.log(isJumping(23454))// === 'JUMPING'
+console.log(removeLetter('Mate academy', 'a'))//=== 'Mte cdemy'
+console.log(removeLetter('Aaaa', 'a'))// === 'A'
+console.log(removeLetter('rrr', 'r'))// === ''
